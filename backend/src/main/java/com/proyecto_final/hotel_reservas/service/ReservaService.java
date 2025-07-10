@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto_final.hotel_reservas.model.Reserva;
 import com.proyecto_final.hotel_reservas.repository.ReservaRepository;
 
+@Service
 public class ReservaService {
     @Autowired
     private ReservaRepository reservaRepository;
