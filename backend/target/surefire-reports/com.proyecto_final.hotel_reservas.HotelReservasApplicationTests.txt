@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.proyecto_final.hotel_reservas.HotelReservasApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.336 s -- in com.proyecto_final.hotel_reservas.HotelReservasApplicationTests
