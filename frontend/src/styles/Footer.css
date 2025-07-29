@@ -1,0 +1,23 @@
+a:hover svg {
+    color: #0d6efd;
+    transition: color 0.3s ease;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #509ae4;
+    max-height: 6.5rem;
+}
+
+footer .container .derechos {
+    text-align: left;
+    padding: 10px 0;
+    color: white;
+}
+
+footer .container .mb-2 {
+    text-align: right;
+    padding: 10px 0;
+}
