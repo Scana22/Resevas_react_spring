@@ -7,6 +7,7 @@ import { Cards } from './Cards';
 import AdminPanel from './AdminPanel';
 import FormProducto from './FormProducto';
 import Footer from './Footer';
+import Recomendaciones from './Recomendaciones';
 
 
 function App() {
@@ -17,12 +18,14 @@ function App() {
         <div className='main-content'>
           <Buscador />
           <Cards />
+          
           <Routes>
             <Route path="/admin" element={<AdminPanel />} />
             <Route path="/admin/agregar" element={<FormProducto />} />
           </Routes>
         </div>
         <Footer />
+        
       </div>
     </Router>
   );
