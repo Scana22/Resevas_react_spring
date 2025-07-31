@@ -2,54 +2,42 @@ package com.proyecto_final.hotel_reservas.model;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
 @Entity
+@Data
+@Table(name = "reservas")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombreCliente;
-    private LocalDate fechaEntrada;
-    private LocalDate fechaSalida;
-    private int cantidadPersonas;
+    @ManyToOne
+    private Usuario usuario;
 
-    //Getters y Setters
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getNombreCliente() {
-        return nombreCliente;
-    }
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
-    }
-    public LocalDate getFechaEntrada() {
-        return fechaEntrada;
-    }
-    public void setFechaEntrada(LocalDate fechaEntrada) {
-        this.fechaEntrada = fechaEntrada;
-    }
-    public LocalDate getFechaSalida() {
-        return fechaSalida;
-    }
-    public void setFechaSalida(LocalDate fechaSalida) {
-        this.fechaSalida = fechaSalida;
-    }
-    public int getCantidadPersonas() {
-        return cantidadPersonas;
-    }
-    public void setCantidadPersonas(int cantidadPersonas) {
-        this.cantidadPersonas = cantidadPersonas;
-    }
+    @ManyToOne
+    private Alojamiento alojamiento;
+
+    @Column(name = "fecha_entrada", nullable = false)
+    private LocalDate fechaEntrada;
+
+    @Column(name = "fecha_salida", nullable = false)
+    private LocalDate fechaSalida;
+
+    @Column(name = "cantidad_personas", nullable = false)
+    private int cantidadPersonas;
 
     
 }
